@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condições</title>
+    <style>
+        body{
+            font: normal 14pt Arial;
+        }
+        input {
+            font: normal 14pt Arial;
+        }
+        div#resultado {
+            margin-top: 20px;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aplicando multa</h1>
+    Velocidade do carro: <input type="number" name="velocidaee" id="velocidade"> Km/h
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="resultado">Resultado: </div>
+
+    <script>
+        function Calcular(){
+            var vel = document.getElementById('velocidade')
+            var velocidade2 = Number(vel.value)
+            var result = document.getElementById('resultado')
+            
+            result.innerHTML = `<p>Sua velocidade atual é ${velocidade2} Km/h<p>`
+            if (velocidade2 > 70){
+                result.innerHTML += '<p>Velocidade acima da permitida. Multa!<p>'
+                
+            }
+            result.innerHTML += '<p>Dirija com atenção<p>'
+        }
+    </script>
+    
+</body>
+</html>

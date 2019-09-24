@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 14pt Arial
+        }
+        input{
+            font: normal 14pt Arial;
+        }
+        div#resultado{
+            margin-top: 20px
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificando seu País</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            var nacionalidade =  document.getElementById('pais')
+            var nac = String(nacionalidade.value).toLowerCase()
+            var resultado = document.getElementById('resultado')
+            
+            if (nac == 'brasil'){
+                resultado.innerHTML = '<p>Você é brasileiro</p>'
+            }
+            else {
+                resultado.innerHTML = '<p>Você é estrangeiro</p>'
+            }
+
+        }
+    </script>
+</body>
+</html>
