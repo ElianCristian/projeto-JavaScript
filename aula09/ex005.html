@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introducao ao DOM</title>
+    <style>
+        body {
+            background: rgb(98, 141, 233);
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique aqui</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1] // recebe o texto do 2 paragrafo
+        var porId = document.getElementById('msg') // receve o texto da div
+        porId.style.background = 'yellow' // altera o fundo da div para amarelo
+        porId.innerText = 'Estou aguardando' // altera o texto da div
+        window.document.write('Está escrito assim no primeiro paragrafo: ' + p1.innerText + '<br>')
+        document.write(p1.innerHTML) // reescreve na tela o texto do segundo paragrafo com toda a sua formatacao
+    </script>
+    
+</body>
+</html>
